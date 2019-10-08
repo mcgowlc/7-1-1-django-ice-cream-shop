@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div >
+        {% for icecream in object_list %}
+            <hr/>
+            <p class="flavors">{{ icecream.flavor }}</p>
+            <p class="flavors">{{ icecream.base }}</p>
+
+            <div class="small-img">
+           <img class ="rounded-circle" src="{{icecream.url}}" alt="img">
+       </div>
+            <hr/>
+            </div>
+
+        {% endfor %}
+
+{% endblock content %}

@@ -1,10 +1,31 @@
 from django.shortcuts import render
-rom django.http import HttpResponse
+from django.http import HttpResponse
+from django.views.generic import ListView, DetailView, CreateView
+from .models import IceCream
 
-def index(request):
-    # return HttpResponse('Hello, World')
-    question_list = Question.objects.all()
-    # output = '<br/>'.join([q.question_text for q in question_list])
-    context = {
-    'question_list': question_list
-    }
+
+class HomePageView(ListView):
+   model = IceCream
+   template_name = 'home.html'
+
+
+class DetailsFlavorView(DetailView):
+   model = IceCream
+   template_name = 'detail.html'
+
+
+class DailyFlavorView(ListView):
+   model = IceCream
+   template_name = 'daily_flavors.html'
+
+
+
+class WeeklyFlavorView(ListView):
+   model = IceCream
+   template_name = 'weekly_flavors.html'
+
+
+
+class SeasonalFlavorView(ListView):
+   model = IceCream
+   template_name = 'seasonal_flavors.html'

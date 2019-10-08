@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+    <h4>SEASONAL FLAVORS:</h4>
+
+<div class="container">
+   {% for icecream in object_list %}
+   <div class="flavor rounded shadow-sm p-3 mb-5 bg-white rounded">
+       <div class="small-img">
+           <img class ="rounded-circle" src="{{icecream.url}}" alt="img">
+       </div>
+   </div>
+   {% endfor %}
+
+</div>
+
+{% endblock content %}
