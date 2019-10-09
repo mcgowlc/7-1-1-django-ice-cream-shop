@@ -11,9 +11,10 @@ class IceCream(models.Model):
     DAILY = 'daily'
     WEEKLY = 'weekly'
     SEASONAL = 'seasonal'
+    FEATURED = 'featured'
 
     BASES = [(VANILLA, 'vanilla'), (CHOCOLATE, 'chocolate')]
-    FEATURED = [(DAILY, 'daily'), (WEEKLY, 'weekly'), (SEASONAL, 'seasonal')]
+    FEATURED = [(DAILY, 'daily'), (WEEKLY, 'weekly'), (SEASONAL, 'seasonal'), (FEATURED, 'featured')]
 
     flavor = models.CharField(max_length=255)
     base = models.CharField(max_length=255, choices=BASES)
@@ -24,3 +25,6 @@ class IceCream(models.Model):
 
     def __str__(self):
         return self.flavor[:15]
+
+    def get_absolute_url(self):
+        return reverse('home')

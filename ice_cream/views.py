@@ -19,7 +19,6 @@ class DailyFlavorView(ListView):
    template_name = 'daily_flavors.html'
 
 
-
 class WeeklyFlavorView(ListView):
    model = IceCream
    template_name = 'weekly_flavors.html'
@@ -29,3 +28,7 @@ class WeeklyFlavorView(ListView):
 class SeasonalFlavorView(ListView):
    model = IceCream
    template_name = 'seasonal_flavors.html'
+
+class FeaturedFlavorView(ListView):
+    model = IceCream
+    template_name = 'home.html'
