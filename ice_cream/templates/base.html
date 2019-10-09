@@ -1,36 +1,36 @@
 {% load static %}
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport"
-         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>BRUSTERS</title>
-   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BRUSTERS</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
+
 <body>
-<div class="row top-box">
-   <h1 class="title">LINDA'S ICE CREAM</h1>
+  <div class="row top-box">
+    <h1 class="title">LINDA'S ICE CREAM</h1>
 
-   <br>
+    <br>
     <ul class="row container-fluid">
-        <ol class="col-md-2 col-sm-6"><a href="{% url 'home' %}">Featured</a></ol>
-        <!-- <ol class="col-md-2 col-sm-6"><a href="{% url 'create' %}">Add new flavor</a></ol> -->
-        <ol class="col-md-2 col-sm-6"><a href="{% url 'daily_flavors' %}">Daily Flavors</a></ol>
-        <ol class="col-md-2 col-sm-6"><a href="{% url 'weekly_flavors' %}">Weekly Flavors</a></ol>
-        <ol class="col-md-2 col-sm-6"><a href="{% url 'seasonal_flavors' %}">Seasonal Flavors</a></ol>
+      {#<ol class="col-md-2 col-sm-6"><a href="{% url 'home' %}">Featured</a></ol>#}
+      {#<ol class="col-md-2 col-sm-6"><a href="{% url 'create' %}">Add new flavor</a></ol>#}
+      <ol class="col-md-2 col-sm-6"><a href="{% url 'daily_flavors' %}">Daily Flavors</a></ol>
+      <ol class="col-md-2 col-sm-6"><a href="{% url 'weekly_flavors' %}">Weekly Flavors</a></ol>
+      <ol class="col-md-2 col-sm-6"><a href="{% url 'seasonal_flavors' %}">Seasonal Flavors</a></ol> -->
 
-</ul>
+    </ul>
 
-</div>
-<div>
-   {% block content %}{% endblock content %}
+  </div>
+  <div>
+    {% block content %}{% endblock content %}
 
-</div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-       crossorigin="anonymous"></script>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>
