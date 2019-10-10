@@ -11,15 +11,14 @@ class IceCream(models.Model):
     DAILY = 'daily'
     WEEKLY = 'weekly'
     SEASONAL = 'seasonal'
-    FEATURED = 'featured'
 
     BASES = [(VANILLA, 'vanilla'), (CHOCOLATE, 'chocolate')]
-    FEATURED = [(DAILY, 'daily'), (WEEKLY, 'weekly'), (SEASONAL, 'seasonal'), (FEATURED, 'featured')]
+    FEATURED = [(DAILY, 'daily'), (WEEKLY, 'weekly'), (SEASONAL, 'seasonal'),]
 
     flavor = models.CharField(max_length=255)
     base = models.CharField(max_length=255, choices=BASES)
     available = models.CharField(max_length=255, choices=FEATURED)
-    featured = models.BooleanField()
+    featured = models.BooleanField(default=False)
     date_churned = models.DateField()
     url = models.TextField(null=True)
 
