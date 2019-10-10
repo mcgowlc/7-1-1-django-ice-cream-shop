@@ -5,9 +5,9 @@ from .views import DailyFlavorView, SeasonalFlavorView, WeeklyFlavorView, Detail
 app_name = "ice_cream"
 
 urlpatterns = [
-    path('ice_cream/daily_flavors/', DailyFlavorView.as_view(), name="daily_flavors"),
-    path('ice_cream/seasonal_flavors/', SeasonalFlavorView.as_view(), name="seasonal_flavors"),
-    path('ice_cream/weekly_flavors/', WeeklyFlavorView.as_view(), name="weekly_flavors"),
-    path('ice_cream/details/<int:pk>/', DetailsFlavorView.as_view(), name="detail"),
-    path('ice_cream/featured_flavors/', FeaturedFlavorView.as_view(), name="featured_flavors"),
+    path('daily_flavors/', DailyFlavorView.as_view(), name="daily_flavors"),
+    path('seasonal_flavors/', SeasonalFlavorView.as_view(), name="seasonal_flavors"),
+    path('weekly_flavors/', WeeklyFlavorView.as_view(), name="weekly_flavors"),
+    path('details/<int:pk>/', DetailsFlavorView.as_view(), name="detail"),
+    path('', FeaturedFlavorView.as_view(), name="featured_flavors"),
 ]
