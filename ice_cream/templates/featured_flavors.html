@@ -1,20 +1,20 @@
-{% extends 'base.html' %}
+{%extends 'base.html' %}
 
-{% block content %}
-
-<h4>Featured Flavors</h4>
-    <div >
-        {% for icecream in object_list %}
-            <hr/>
-            <p class="flavors">{{ icecream.flavor }}</p>
-            <p class="flavors">{{ icecream.base }}</p>
-
-            <div class="small-img">
-           <img class ="rounded-circle" src="{{icecream.url}}" alt="img">
-       </div>
-            <hr/>
-            </div>
-
-        {% endfor %}
-
-{% endblock content %}
+{%block content%}
+<div class="container">
+        <div class="row topmargin justify-content-center">
+        {% for obj in object_list %}
+            <a href="{{obj.get_absolute_url}} ">{{obj.title}}</a>
+        <div class="col-3 squaremenu">
+            <h3 class="flavorlink"><a class="flavorlink" href="{% url 'ice_cream_detail' ice.pk %}">{{ice.flavor}}</a></h3>
+                <div class="avail">
+                    <datetime>{{ice.date_churned}}</datetime>
+                    <span>: {{ice.available}}</span>
+                    <h5>{{ice.base}}</h5>
+                    <img class="imgposit" src="{{ice.model_pic}}">
+                </div>
+         </div>
+        {%endfor%}
+        </div>
+</div>
+{%endblock content%}
