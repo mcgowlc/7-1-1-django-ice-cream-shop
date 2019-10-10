@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import IceCream
 
 
@@ -39,10 +39,10 @@ class FlavorCreateView(CreateView):
    template_name = 'create.html'
    fields = ['flavor', 'url', 'base', 'available', 'featured', 'date_churned']
 
-   class FlavorEditView(UpdateView):
-   model = IceCream
-   template_name = 'edit.html'
-   fields = ['flavor', 'url', 'base', 'available', 'featured', 'date_churned']
+class FlavorEditView(UpdateView):
+    model = IceCream
+    template_name = 'edit.html'
+    fields = ['flavor', 'url', 'base', 'available', 'featured', 'date_churned']
 
 
 class FlavorDeleteView(DeleteView):
