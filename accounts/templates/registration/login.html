@@ -1,7 +1,12 @@
-<h2>Login</h2>
-<form method="post">
-  {% crsf_token %}
-  {{form.as_p}}
-  <button>Login</button>
+{% extends 'base.html' %}
 
-</form>
+{%block title %} Sign up {% endblock title %}
+
+{% block content %}
+{% csrf_token %}
+    <h2>Log In</h2>
+    <form action="post">{% csrf_token %} {{form.as_p}}
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+
+{% endblock content %}

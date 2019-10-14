@@ -17,14 +17,14 @@
 
     <br>
     <ul class="row container-fluid">
-      <ol class="col-md-2 col-sm-6"><a href="{% url 'ice_cream:featured_flavors' %}">Featured Flavors</a></ol>
-      {#<ol class="col-md-2 col-sm-6"><a href="{% url 'create' %}">Add new flavor</a></ol>#}
-      <ol class="col-md-2 col-sm-6"><a href="{% url 'ice_cream:daily_flavors' %}">Daily Flavors</a></ol>
-      <ol class="col-md-2 col-sm-6"><a href="{% url 'ice_cream:weekly_flavors' %}">Weekly Flavors</a></ol>
-      <ol class="col-md-2 col-sm-6"><a href="{% url 'ice_cream:seasonal_flavors' %}">Seasonal Flavors</a></ol>
-
+      <ol class="col-sm-2 col-sm-2"><a href="{% url 'ice_cream:featured_flavors' %}">Featured Flavors</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'ice_cream:daily_flavors' %}">Daily Flavors</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'ice_cream:weekly_flavors' %}">Weekly Flavors</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'ice_cream:seasonal_flavors' %}">Seasonal Flavors</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'accounts:signup' %}">Sign Up</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'login' %}">Log In</a></ol>
+      <ol class="col-md-2 col-sm-2"><a href="{% url 'login' %}">Log out</a></ol>
     </ul>
-
   </div>
   <div>
     {% block content %}{% endblock content %}
